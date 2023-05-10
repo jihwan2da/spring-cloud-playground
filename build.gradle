@@ -1,0 +1,8 @@
+subprojects {
+	group = 'com.msa'
+	version = '1.0'
+
+	ext {
+		springBootVersion = '3.0.6'
+	}
+}
