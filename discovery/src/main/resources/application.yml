@@ -1,1 +1,13 @@
+server:
+  port: 8761
 
+## application ID 지정
+spring:
+  application:
+    name: discoveryservice
+
+## 유레카 클라이언트 라이브러리 사용 X
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
