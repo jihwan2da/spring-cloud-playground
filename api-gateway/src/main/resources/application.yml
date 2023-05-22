@@ -1,0 +1,36 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: apiGateway-service
+  cloud:
+    gateway:
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
+      routes:
+#        - id: ## 라우팅 할 application id(맞지 않아도 됨)
+#          uri: ## 라우팅 할 주소 or 유레카에 등록되어 있는 Application id
+#          predicates: ## 조건 절
+#            - Path=/first-service/** # spring cloud 서버로 들어오는 path 주의 :근데 uri뒤로 그대로 붙음 ex) localhost:8081/first-server/**
+#          filters:
+##            - AddRequestHeader=first-request, first-request-header2
+##            - AddResponseHeader=first-response, first-response-header2
+#            - name: CustomFilter
+#            - name: LoggingFilter
+#              args:
+#                baseMessage: Hi, there.
+#                preLogger: true
+#                postLogger: true
+
