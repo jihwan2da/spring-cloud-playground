@@ -1,3 +1,4 @@
 rootProject.name = 'msa'
 include 'discovery'
 include 'api-gateway'
+include 'user'
