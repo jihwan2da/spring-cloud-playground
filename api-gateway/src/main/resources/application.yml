@@ -28,6 +28,10 @@ spring:
           uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/product-service/**
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order-service/**
 #        - id: ## 라우팅 할 application id(맞지 않아도 됨)
 #          uri: ## 라우팅 할 주소 or 유레카에 등록되어 있는 Application id
 #          predicates: ## 조건 절
