@@ -3,7 +3,7 @@
 spring-cloud-playground is develop playground for learning msa with spring cloud. 
 
   
-it contains **Centralized Configuration Management**, **Service Discovery**, **Load Distribution(Load Balancing)**, **Routing**, **Docker Container** and will contains **Easier Rest Client(FeignClient)**, **Circuit Breakers**, **Distributed Tracing**, **Queueing Service**
+it contains **Centralized Configuration Management**, **Service Discovery**, **Load Distribution(Load Balancing)**, **Routing**, **Docker Container** and will contain **Easier Rest Client(FeignClient)**, **Circuit Breakers**, **Distributed Tracing**, **Queueing Service**
 
 ## Getting Start
 ```shell
