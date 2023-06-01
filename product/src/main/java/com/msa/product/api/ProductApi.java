@@ -11,6 +11,6 @@ public class ProductApi {
 
     @GetMapping("/health_check")
     public String healthCheck(HttpServletRequest request) {
-        return String.format("It's Working in User Service on Port %s", request.getServerPort());
+        return String.format("It's Working in Product Service on Port %s", request.getServerPort());
     }
 }

@@ -1,0 +1,58 @@
+version: "3.8"
+
+services:
+  api-gateway:
+    build: api-gateway
+    hostname: api-gateway
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api-gateway/build/libs/api-gateway-1.0.jar:/build/app.jar
+    deploy:
+      resources:
+        limits:
+          memory: 180m
+
+  discovery-service:
+    build: discovery
+    hostname: discovery-service
+    ports:
+      - "8761:8761"
+    volumes:
+      - ./discovery/build/libs/discovery-1.0.jar:/build/app.jar
+    deploy:
+      resources:
+        limits:
+          memory: 180m
+
+  user:
+    build: user
+    hostname: user
+    volumes:
+      - ./user/build/libs/user-1.0.jar:/build/app.jar
+    deploy:
+      resources:
+        limits:
+          memory: 180m
+
+  order:
+    build: orders
+    hostname: order
+    volumes:
+      - ./orders/build/libs/orders-1.0.jar:/build/app.jar
+    deploy:
+      resources:
+        limits:
+          memory: 180m
+
+  product:
+    build: product
+    hostname: product
+    volumes:
+      - ./product/build/libs/product-1.0.jar:/build/app.jar
+    deploy:
+      resources:
+        limits:
+          memory: 180m
+
+
