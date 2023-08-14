@@ -9,6 +9,17 @@ spring:
   application:
     name: user-service
 
+  data:
+    mongodb:
+      host: ${MONGO_DATASOURCE_HOST}
+      username: ${MONGO_DATASOURCE_USERNAME}
+      password: ${MONGO_DATASOURCE_PASSWORD}
+      port: 27017
+      database: users
+
+jwt:
+  secret: ${JWT_SECRET}
+
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
